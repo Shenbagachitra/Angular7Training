@@ -1,0 +1,89 @@
+friends:{{friends}}
+
+<ol>
+<li *ngFor="let f of friends; let counter=index">
+    {{f}}.
+    counter number {{counter}}
+    <button (click)="displaytext(counter)">click {{ f }}</button>
+
+    </li>
+</ol>
+<!-- <hr>
+<div>
+demo of *ngFor Directive with JSOn Array:
+<table border="1px">
+    <thead>
+        <tr>
+            <th>S.no</th>
+            <th>City</th>
+            <th>STD</th>
+        </tr>
+    </thead>
+        <tbody>
+            <tr *ngFor="let l of location">
+            <td>{{ l.id }}</td>
+            <td>{{ l.city }}</td>
+            <td>{{ l.code }}</td>
+            </tr>
+        </tbody>
+    
+</table>
+
+<table border="1px">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>UserName</th>
+                <th>ZipCode</th>
+                <th>Longitude</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr *ngFor="let u of users ">
+                <td>{{ u.id }}</td>
+                <td>{{ u.username }}</td>
+                <td>{{ u.address.zipcode }}</td>
+                <td>{{ u.address.geo.lng }}</td>
+                </tr>
+            </tbody>
+        
+    </table>
+
+</div> -->
+<hr>
+<div>
+Demo of *ngIf Directive
+<button (click)="toggleCheck()">Toggle check </button>
+<div class="box" *ngIf="check">
+    </div>
+<br>
+Demo of *ngIf Directive with Else criteria:
+<button (click)="toggleElseCheck()">Toggle check </button>
+<div class="yesbox" *ngIf="checkelse;else elseTemplate">
+I am here:
+<button>t</button>
+</div>
+<ng-template #elseTemplate>
+<div class="nobox">    
+</div>
+</ng-template>
+<hr>
+<div>Demo of *ngSwitch Directive:</div>
+<div [ngSwitch]="city">
+    <span *ngSwitchCase="'001'">Chennai</span>
+    <span *ngSwitchCase="'002'">Mumbai</span>
+    <span *ngSwitchCase="'003'">Kolkatta</span>
+    <span *ngSwitchCase="'004'">Bengaluru</span>
+    <span *ngSwitchDefault>Code or City NA</span>
+</div>
+<hr>
+<div>Demo of Pipes:</div>
+<br>
+Savings:{{money | currency:'INR' }}
+<br>
+name:{{name | uppercase}}
+<br>
+birthday:{{birthday | date:'shortDate'}}
+</div>
+
+<!-- {{ displaytext() }} -->

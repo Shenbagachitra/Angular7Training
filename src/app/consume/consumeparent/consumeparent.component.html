@@ -1,0 +1,22 @@
+<p class="parent">
+  consumeparent works!
+</p>
+<br>
+Value of name is : {{ name }}
+<br>
+<div class="child">
+  I am child : <app-child [sendName]="name" (sendToParent)="receivedNewName($event)"></app-child>
+</div>
+<br>
+
+<br>
+<a routerLink="child1">Child 1</a> &nbsp;
+<a routerLink="child2">Child 2</a>
+<!--
+<ul>
+  <li>Child 1 : <app-consumechild1></app-consumechild1></li>
+  <li>Child 2 : <app-consumechild2></app-consumechild2></li>
+</ul>
+-->
+<router-outlet></router-outlet>
+

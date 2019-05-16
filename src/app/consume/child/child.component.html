@@ -1,0 +1,8 @@
+<p>
+  Received Name : {{ sendName }}
+  <br>
+  Change Name:<input type="text" [(ngModel)]="sendName"> <!--[(ngModel)]="sendName"-->
+  &nbsp;<button (click)="broadcastchange()">Broadcast Change</button><br>
+  New Name : {{ sendName }}<br>
+
+</p>

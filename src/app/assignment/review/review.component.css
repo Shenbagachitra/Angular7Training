@@ -1,0 +1,27 @@
+.title
+{
+    background-color: aqua;
+    height: 15px;
+    text-align: center
+}
+
+.thumb
+{
+    background-color: pink;
+    height: 100px;
+    width: 20%;    
+    float: left;
+    position: relative;
+    
+    
+}
+
+.desc
+{
+    background-color: chocolate;
+    height: 100px;
+    width: 80%;    
+    float: right;
+    position: relative
+
+}

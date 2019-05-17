@@ -16,6 +16,7 @@ export class Consumechild2Component implements OnInit {
   ngOnInit() {
     
     this.allbanks= this.local.addbank()
+    
    }
 
 }

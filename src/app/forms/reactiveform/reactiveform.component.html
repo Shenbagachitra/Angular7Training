@@ -1,3 +1,23 @@
-<p>
-  reactiveform works!
-</p>
+<div>
+  Reactive form:
+  <br>
+  <div>
+    <form [formGroup]='myForm' (ngSubmit)="submitForm(myForm)">
+      <label>Name : </label>&nbsp;
+      <input type="text" formControlName="fn"><br>
+      <label>Score : </label>&nbsp;
+      <input type="number" formControlName="score"><br>
+      <label>Hobby :</label>&nbsp;
+      <select formControlName="hobby">
+        <option value="hacking">hacking</option>
+        <option value="driving">driving</option>
+        <option value="trekiking">trekiking</option>
+      </select><br>
+      <button type="submit" [disabled]="myForm.invalid">Submit</button>
+
+
+
+
+    </form>
+  </div>
+</div>

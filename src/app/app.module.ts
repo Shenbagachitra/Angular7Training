@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms"
 import { BrowserAnimationsModule} from "@angular/platform-browser/animations"
+import { HttpClientModule } from "@angular/common/http"
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ import { ChildComponent } from './consume/child/child.component';
 import { TemplateformComponent } from './forms/templateform/templateform.component';
 import { ReactiveformComponent } from './forms/reactiveform/reactiveform.component';
 import { AnimationComponent } from './Animate/animation/animation.component';
+import { RemoteComponent } from './restApi/remote/remote.component';
 
 
 
@@ -51,7 +53,8 @@ import { AnimationComponent } from './Animate/animation/animation.component';
     ChildComponent,
     TemplateformComponent,
     ReactiveformComponent,
-    AnimationComponent
+    AnimationComponent,
+    RemoteComponent
     
   ],
   imports: [
@@ -60,6 +63,7 @@ import { AnimationComponent } from './Animate/animation/animation.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path:'family',
@@ -124,6 +128,10 @@ import { AnimationComponent } from './Animate/animation/animation.component';
       {
         path: 'Animation',
         component:AnimationComponent
+      },
+      {
+        path: 'Remote',
+        component:RemoteComponent
       },
       {
         path:'**',

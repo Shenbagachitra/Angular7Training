@@ -1,9 +1,39 @@
 <div>
   Remote Users:<br>
-  <ul>
+  <!-- <ul>
       <li *ngFor="let u of users">
         {{u.id}}. {{u.name}} from {{u.address.city}}  {{u.address.geo.lat}}  {{u.address.geo.lng}}
       </li> 
-  </ul>
+  </ul> -->
+
+  <table style="border:1px">
+    <tr>
+      <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let e of employee">
+            <td>{{e.id}}</td>
+            <td>{{e.employee_name}}</td>
+            <td>{{e.employee_salary}}</td>
+            <td>{{e.employee_age}}</td>
+            <td><button (click)="getEmployeeDetails(e.id)">Details</button></td>
+            <td><button (click)="deleteEmployee(e.id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </tr>
+  </table>
 </div>
+
+<br><br>
+<button (click)="addEmployee()">  Add Employee </button>
+
+<br><br>
+<app-employee-form></app-employee-form>
+
 

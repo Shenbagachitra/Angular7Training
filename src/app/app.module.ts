@@ -28,7 +28,8 @@ import { TemplateformComponent } from './forms/templateform/templateform.compone
 import { ReactiveformComponent } from './forms/reactiveform/reactiveform.component';
 import { AnimationComponent } from './Animate/animation/animation.component';
 import { RemoteComponent } from './restApi/remote/remote.component';
-
+import { EmployeeDetailsComponent } from './restApi/employee-details/employee-details.component';
+import { EmployeeFormComponent } from './restApi/employee-form/employee-form.component'
 
 
 
@@ -54,8 +55,9 @@ import { RemoteComponent } from './restApi/remote/remote.component';
     TemplateformComponent,
     ReactiveformComponent,
     AnimationComponent,
-    RemoteComponent
-    
+    RemoteComponent,
+    EmployeeDetailsComponent,
+    EmployeeFormComponent
   ],
   imports: [
     BrowserModule,
@@ -132,6 +134,10 @@ import { RemoteComponent } from './restApi/remote/remote.component';
       {
         path: 'Remote',
         component:RemoteComponent
+      },
+      {
+        path: 'remote/:id',
+        component:EmployeeDetailsComponent
       },
       {
         path:'**',
